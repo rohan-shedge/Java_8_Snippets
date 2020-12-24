@@ -1,2 +1,2 @@
 # Java_8_Snippets
-Lets play with Java8
+Lets play with Java 8
