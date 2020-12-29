@@ -10,6 +10,7 @@ public class LoopMapClassic {
 		map.put("C", 3);
 		map.put("D", 4);
 		map.put("E", 5);
+		map.put("F", 6);
 		
 		for (Entry<String, Integer> entry : map.entrySet()) {
 			System.out.println(entry.getKey() + " " + entry.getValue());
