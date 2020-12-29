@@ -21,7 +21,10 @@ public class StreamCreation {
 		
 		//Convert to List and Print
 		List<String> list = Arrays.asList(strArray);
+		
+		//both are sequential
 		list.stream().forEach(x -> System.out.print(x));
+		list.forEach(x -> System.out.print(x));
 		
 	}
 
