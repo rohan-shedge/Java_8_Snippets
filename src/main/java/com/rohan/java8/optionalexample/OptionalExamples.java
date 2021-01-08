@@ -7,9 +7,9 @@ public class OptionalExamples {
 		//Empty Optional
 		Optional<String> opt = Optional.empty();
 		Optional<String> opt1 = Optional.empty();
-		System.out.println(opt);k
+		System.out.println(opt);
 		
-        // Use Optional.of when you are sure that the value is NON NULL
+		// Use Optional.of when you are sure that the value is NON NULL
 		opt = Optional.of(null); 
 		
 		// Use Optional.ofNullable when you are not sure about the value
