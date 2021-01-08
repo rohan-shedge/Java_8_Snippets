@@ -1,4 +1,4 @@
-package OptionalExamples;
+package com.rohan.java8.optionalexample;
 import java.util.Optional;
 
 public class OptionalExamples {
@@ -7,7 +7,7 @@ public class OptionalExamples {
 		//Empty Optional
 		Optional<String> opt = Optional.empty();
 		Optional<String> opt1 = Optional.empty();
-		System.out.println(opt);
+		System.out.println(opt);k
 		
         // Use Optional.of when you are sure that the value is NON NULL
 		opt = Optional.of(null); 
