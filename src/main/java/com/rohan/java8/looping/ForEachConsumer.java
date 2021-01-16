@@ -13,7 +13,7 @@ public class ForEachConsumer {
 		Stream<String> stream = Stream.of("Rohan", "vivek", "nikhil");
 		
 		//Convert to Hex
-        Consumer<String> con = (s) -> {
+                Consumer<String> con = (s) -> {
         	System.out.print(s + " => ");
         	StringBuilder sb = new StringBuilder();
         	for (char c: s.toCharArray()) {
