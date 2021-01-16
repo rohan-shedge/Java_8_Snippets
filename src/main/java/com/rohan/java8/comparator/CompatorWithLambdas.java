@@ -22,7 +22,6 @@ public class CompatorWithLambdas {
 		System.out.println();
 
 		//sort by Age
-		//Collections.sort(list, (Student s1, Student s2) -> {return s1.getAge() - s2.getAge();});
 		list.sort((Student s1, Student s2) -> (int)s1.getAge() - (int)s2.getAge());
 
 		System.out.println(list);
