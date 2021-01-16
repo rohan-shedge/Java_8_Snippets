@@ -28,7 +28,5 @@ public class StreamCreation {
 		//both are sequential
 		list.stream().forEach(x -> System.out.print(x));       
 		list.forEach(x -> System.out.print(x));
-		
 	}
-
 }
