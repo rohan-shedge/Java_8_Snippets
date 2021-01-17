@@ -1,4 +1,4 @@
-package comparator;
+package com.rohan.java8.comparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -16,12 +16,12 @@ public class CompatorWithLambdas {
 		System.out.println("Before Sort");
 		System.out.println(list);
 
-		//sort by Name
+		//sort by Name , Using Collection.sort method
 		Collections.sort(list, (Student s1, Student s2) -> s1.getName().compareTo(s2.getName()));
 		System.out.println(list);
 		System.out.println();
 
-		//sort by Age
+		//sort by Age, Using inbuilt List.sort, Java 8
 		list.sort((Student s1, Student s2) -> (int)s1.getAge() - (int)s2.getAge());
 
 		System.out.println(list);
