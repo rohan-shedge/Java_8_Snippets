@@ -24,7 +24,6 @@ public class Sorted {
                                              (oldValue, newValue) -> oldValue,       
             		                         LinkedHashMap::new
             		              ));
-        
        System.out.println(result1);        
 	}
 

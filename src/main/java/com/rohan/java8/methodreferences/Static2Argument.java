@@ -1,4 +1,4 @@
-package com.rohan.java8.methodReferences;
+package com.rohan.java8.methodreferences;
 
 import java.util.function.BiFunction;
 

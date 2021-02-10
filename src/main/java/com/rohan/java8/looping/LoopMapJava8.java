@@ -14,7 +14,7 @@ public class LoopMapJava8 {
 		map.put(null, 5);
 		
 		//Looping Map through Java8
-		map.forEach((k, v) -> System.out.println(k + " " + v));
+		map.forEach((k, v) -> System.out.println(k + " -> " + v));
 		
 		//Looping Map through Java8 checking non null key
 		map.forEach((k, v) -> {
