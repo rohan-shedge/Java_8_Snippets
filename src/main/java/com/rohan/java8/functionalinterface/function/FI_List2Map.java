@@ -25,7 +25,6 @@ public class FI_List2Map {
 	    list.forEach(x -> {
 	    	map.put(x, func.apply(x));
 	    } );
-	    
 		return map;
 	  }
 }
