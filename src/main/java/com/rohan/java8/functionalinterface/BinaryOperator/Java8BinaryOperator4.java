@@ -1,6 +1,7 @@
 package com.rohan.java8.functionalinterface.BinaryOperator;
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.function.BinaryOperator;
@@ -24,8 +25,22 @@ public class Java8BinaryOperator4 {
         BinaryOperator<Developer> bo = BinaryOperator.maxBy(comparing);
 
         Developer result = find(list, bo);
+        
+        //another way to sort
+        Collections.sort(list, comparing);
+        
+        //another way to sort
+        list.stream()
+            .sorted(comparing)
+            .forEach(System.out::println);
 
         System.out.println(result);     // Developer{name='jaden', salary=10000}
+        System.out.println(list.get(0));     // Developer{name='jaden', salary=10000}
+        
+        //another way to sort
+        System.out.println("-------------");    
+        System.out.println(Collections.max(list, comparing));    
+        
 
         // one line
 
