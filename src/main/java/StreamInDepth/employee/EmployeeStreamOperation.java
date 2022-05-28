@@ -1,6 +1,7 @@
-package StreamInDepth;
+package StreamInDepth.employee;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +29,6 @@ public class EmployeeStreamOperation {
 		list.add(new Employee(255, "Ali Baig", 23, "Male", "Infrastructure", 2018, 12700.0));
 		list.add(new Employee(266, "Sanvi Pandey", 26, "Female", "Product Development", 2015, 28900.0));
 		list.add(new Employee(277, "Anuj Chettiar", 31, "Male", "Product Development", 2012, 35700.0));
-		
 		
 		//1. How many male and female employees are there in the organization?
 		Map<String, Long> avgCount =
@@ -75,5 +75,42 @@ public class EmployeeStreamOperation {
 		deptCount.forEach((k, v) -> System.out.println(k + " -> " + v)); 		
 		System.out.println();
 		
+		
+		
+		//7. calculate second highest salary
+		Optional<Employee> max  = list.stream()
+		    .max(Comparator.comparing(Employee::getSalary));
+		
+		list.stream()
+		    .filter(e -> e.salary!=max.get().getSalary())
+		    .max(Comparator.comparing(Employee::getSalary));
+		
+		//8. Print all the 3 highest number in the array.
+		Integer[] array = new Integer[] {1, 2, 3, 4, 5};
+		List<Integer> lis1t = Arrays.asList(array);
+		Optional<Integer> max1 = lis1t.stream()
+		     .max(Comparator.naturalOrder());
+		Optional<Integer> max2 = lis1t.stream().filter(i -> i != max1.get()).max(Comparator.naturalOrder());
+		Optional<Integer> max3 = lis1t.stream().filter(i -> (i != max2.get() && i != max1.get())).max(Comparator.naturalOrder());
+		System.out.println(max1.get());
+		System.out.println(max2.get());
+		System.out.println(max3.get());
+		
+		System.out.println("------------------");
+		System.out.println(lis1t.stream()
+		     .sorted(Comparator.reverseOrder())
+		     .limit(3)
+		     .collect(Collectors.toList()));
+		     
+		System.out.println("------------------");
+		
+		//7. Sort based on salary 
+		List<Employee> list123 = list.stream()
+	    .sorted(Comparator.comparing(Employee::getSalary).reversed())
+	    .collect(Collectors.toList());
+		list123.forEach(System.out::println);
+		System.out.println("------------------");
+
+
 	}
 }

@@ -1,4 +1,4 @@
-package StreamInDepth;
+package StreamInDepth.employee;
 
 class Employee
 {
