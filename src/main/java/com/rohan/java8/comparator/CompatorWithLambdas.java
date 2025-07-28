@@ -16,6 +16,22 @@ public class CompatorWithLambdas {
 		System.out.println("Before Sort");
 		System.out.println(list);
 
+
+		list.sort(Comparator.comparing((s1) -> {
+					return s1.getAge();
+				}
+
+		));
+		System.out.println("asd");
+		list.sort((Student o1, Student o2) -> {
+			return (int) (o1.getAge() - o2.getAge());
+		});
+		System.out.println(list);
+
+		System.out.println("asd");
+
+		list.sort(Comparator.comparing((s1) -> s1.getAge()));
+
 		//sort by Name , Using Collection.sort method
 		Collections.sort(list, (Student s1, Student s2) -> s1.getName().compareTo(s2.getName()));
 		System.out.println(list);
@@ -25,7 +41,22 @@ public class CompatorWithLambdas {
 		list.sort((Student s1, Student s2) -> (int)s1.getAge() - (int)s2.getAge());
 
 		System.out.println(list);
-		
+
+		// sorting by Age
+		list.sort(Comparator.comparing(Student::getAge));
+		System.out.println(list);
+
+		// sorting by Age Desc
+		list.sort(Comparator.comparing(Student::getAge).reversed());
+		System.out.println(list);
+
+		// sorting by ID asc, Age Desc
+		list.sort(Comparator.comparing(Student::getId).reversed().thenComparing(Comparator.comparing(Student::getAge).reversed());
+		System.out.println(list);
+
+
+
+
 	}
 
 }
